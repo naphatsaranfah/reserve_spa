@@ -1,3 +1,916 @@
+/*@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap')*/
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "IBM Plex Sans Thai", sans-serif;
+  }
+}
+
+@layer components {
+  .test {
+    @apply bg-black;
+  }
+
+  .container-navbar {
+    @apply px-10 py-10;
+  }
+
+  .container-menu-top-navbar {
+    @apply flex justify-between items-center mb-6 pb-2 border-b;
+  }
+
+  .navbar-bottom-user {
+    @apply flex justify-between items-center;
+  }
+
+  .logo {
+    @apply text-2xl text-fuchsia-900 font-semibold;
+  }
+
+  .text-menu-navbar {
+    @apply text-fuchsia-900 hover:text-pink-400 text-lg cursor-pointer;
+  }
+  .text-sub-menu-navbar {
+    @apply text-fuchsia-900 text-lg hover:text-pink-400;
+  }
+
+  .button-register {
+    @apply bg-fuchsia-900 py-2 px-5 rounded-lg text-white;
+  }
+
+  .container-change-password {
+    @apply rounded-2xl my-10 p-10 lg:mx-96 md:mx-40 sm:mx-20;
+    background: #e4dae7;
+  }
+  .header-change-password {
+    @apply font-semibold text-2xl text-center mt-5 text-fuchsia-900;
+  }
+  .container-text-change-password {
+    @apply mt-7;
+  }
+  .text-change-password {
+    @apply text-center mt-2 text-lg;
+  }
+  .container-header-banner {
+    @apply px-10 mt-10;
+  }
+  /*
+  .header-banner {
+    @apply text-purple-900 text-4xl font-semibold 	mt-6;
+  }
+  */
+  .button-booking-banner {
+    @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+  }
+  /* .container-login {
+    @apply px-10 ;
+  } */
+  .header-login {
+    @apply text-center text-2xl font-semibold text-fuchsia-900  mt-10 py-10;
+  }
+
+  .input-email {
+    @apply pl-10 py-2 w-full rounded-lg mt-5  bg-white shadow-md border-2 border-fuchsia-900 focus:ring-2  focus:ring-fuchsia-700 focus:outline-fuchsia-700;
+  }
+  .icon {
+    @apply absolute left-0 top-0 mt-7 ml-2 fill-fuchsia-900;
+  }
+  .forgot-password {
+    @apply text-fuchsia-900 hover:underline underline-offset-1 text-end mt-10 cursor-pointer;
+  }
+  .input-forgot-password {
+    @apply pl-4 py-2 w-full rounded-l-lg;
+  }
+  .input-forgot-send-otp {
+    @apply pl-10 py-2 w-full rounded-lg mt-5;
+  }
+
+  .button-login {
+    @apply bg-fuchsia-900 w-full mt-10 py-2 px-12 rounded-lg text-white  text-lg font-semibold hover:bg-fuchsia-800;
+  }
+
+  .button-send_password {
+    @apply bg-fuchsia-900 w-full mt-10 py-2 px-12 rounded-lg text-white  text-lg font-semibold hover:bg-fuchsia-800;
+  }
+
+  .container-text-login {
+    @apply lg:px-28 md:px-60 sm:px-40;
+  }
+  .text-or-login {
+    @apply text-center mt-6 text-fuchsia-900;
+  }
+  .button-facebook {
+    @apply py-2 px-10 text-white w-full rounded-lg mt-6 flex justify-center;
+    background: #4267b2;
+  }
+  .button-line {
+    @apply py-2 px-10 text-white w-full rounded-lg mt-6 flex gap-2 justify-center;
+    background: #06c755;
+  }
+  .text-free-register {
+    @apply text-fuchsia-900 underline underline-offset-1 mt-10 text-center cursor-pointer;
+  }
+
+  /*  .container-grid-select {
+      @apply grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 text-center mt-10;
+    }
+    
+    */
+
+  .grid-highlight-details {
+    @apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mt-10;
+  }
+  .header-highlight {
+    @apply mt-10 font-semibold text-fuchsia-900 text-xl text-center;
+  }
+  .highlight-details {
+    @apply text-fuchsia-900;
+  }
+  .button-booking-highlight {
+    @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+  }
+
+  /* .grid-service {
+    @apply px-20 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 text-center mt-10 p-10;
+  } */
+
+  .header-our-services {
+    @apply text-center text-xl  text-fuchsia-900 font-semibold mt-20;
+  }
+
+  .details-services {
+    @apply mt-5 text-fuchsia-900 font-semibold;
+  }
+  .header-services {
+    @apply text-fuchsia-900 mt-8;
+  }
+  .image-service {
+    @apply inline;
+  }
+  .card-bg-discount {
+    @apply bg-fuchsia-900 text-center p-10;
+  }
+  .button-book-bottom-discount {
+    @apply bg-pink-400 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+  }
+  .header-professional-therapist {
+    @apply text-center text-xl  text-fuchsia-900 font-semibold mt-20;
+  }
+
+  /*
+  .grid-therapist {
+    @apply grid grid-cols-4 gap-5 mt-10;
+  }
+  */
+
+  .card-therapist {
+    @apply rounded-lg items-center p-5 drop-shadow-md bg-white hover:border-fuchsia-900 border-solid border-2;
+  }
+  .content-therapist-professional {
+    @apply mt-5 text-fuchsia-900;
+  }
+  .header-feedback {
+    @apply text-center text-xl  text-fuchsia-900 font-semibold mt-20;
+  }
+  /*
+  .grid-feedback {
+    @apply grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-5;
+  }
+  */
+  .content-feedback {
+    @apply mt-10 rounded-lg items-center drop-shadow-md bg-white hover:border-fuchsia-900 border-solid border-2;
+  }
+  .grid-address-select {
+    @apply grid grid-cols-2  text-center mt-20 gap-5;
+  }
+  .button-send-otp {
+    @apply bg-fuchsia-900 w-full mt-10 py-2 px-12 rounded-lg text-white  text-lg font-semibold hover:bg-fuchsia-800;
+  }
+  .container-setting-profile {
+    @apply mx-10  mt-24  border-solid border-2 border-gray-100 rounded-2xl;
+  }
+  .header-profile {
+    @apply grid grid-cols-6 gap-4 px-10;
+  }
+  .tab-menu-setting-profile {
+  }
+  .username {
+    @apply text-fuchsia-900 font-semibold mb-0;
+  }
+  .email-user {
+    @apply text-fuchsia-900 underline underline-offset-2 mt-0;
+  }
+  /* .padding-image {
+    @apply bg-white drop-shadow-lg rounded-lg mt-10;
+  } */
+
+  .header-personal-information {
+    @apply text-fuchsia-900 font-semibold;
+  }
+
+  .container-input-personal-information {
+    @apply bg-white grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 mt-10 gap-6;
+  }
+
+  .container-input-health {
+    @apply bg-white grid  gap-6 mx-10 mt-10;
+  }
+
+  .header-address {
+    @apply text-fuchsia-900 font-semibold  mt-10;
+  }
+  .option-select {
+    @apply bg-white;
+  }
+  .header-health {
+    @apply text-fuchsia-900 font-semibold mt-10 text-xl;
+  }
+
+  .container-promotion {
+    @apply px-10 m-10;
+  }
+
+  .text-header-promotion {
+    @apply text-fuchsia-900 text-2xl font-semibold mt-10;
+  }
+
+  .icon-spa-promotion {
+    @apply bg-fuchsia-900 fill-white p-2  rounded-full inline;
+  }
+
+  /* .container-grid-package {
+    @apply grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-3 mt-10 gap-10;
+  } */
+
+  .card-promotion {
+    @apply p-10 rounded-xl text-center shadow-lg hover:bg-fuchsia-100;
+  }
+
+  .header-text-card-promotion {
+    @apply text-fuchsia-900 font-semibold mt-10;
+  }
+
+  .text-header-select-card-promotion {
+    @apply text-gray-600 mt-10;
+  }
+
+  .button-select-promotion {
+    @apply bg-fuchsia-900 w-full mt-12 py-2 px-6 rounded-lg text-white  text-lg font-semibold hover:bg-fuchsia-700;
+  }
+  .input-change-password {
+    @apply pl-5 py-2 w-full rounded-lg mt-5  bg-white shadow-md   focus:ring-2  focus:ring-fuchsia-700 focus:outline-fuchsia-700;
+  }
+  .input-confirm-change-password {
+    @apply pl-5 py-2 w-full rounded-lg mt-5  bg-white shadow-md   focus:ring-2  focus:ring-fuchsia-700 focus:outline-fuchsia-700;
+  }
+  .text-header-footer {
+    @apply lg:text-2xl md:text-xl sm:text-base  text-center text-white;
+  }
+  .header-reserve_spa {
+    @apply text-lg font-semibold text-fuchsia-900 mt-20;
+  }
+  .container-reserve_spa {
+    @apply px-10 py-10;
+  }
+  /* .container-button-one-two {
+    @apply mt-10 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-6;
+  } */
+  .btn-select-spa_one-two {
+    @apply bg-white border-2  p-5 rounded-xl text-fuchsia-900 w-48 hover:bg-fuchsia-900 hover:text-white;
+  }
+  .header-select-client {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+  .container-grid-select-client {
+    @apply bg-white grid grid-cols-5 mt-10 gap-12;
+  }
+  .card-grid-select-client {
+    @apply shadow-md rounded-xl hover:border-solid hover:border-2 hover:border-fuchsia-900;
+  }
+  .text-me {
+    @apply text-center py-5 text-fuchsia-900 cursor-pointer;
+  }
+  .image-me {
+    @apply rounded-t-xl text-fuchsia-900 cursor-pointer;
+  }
+  .header-reserve-spa {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+  .text-select-kind-spa {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-button-select-kind-spa {
+    @apply mt-10 flex gap-6;
+  } */
+
+  .btn-select-kind-spa {
+    @apply p-5 text-lg ring-1 text-fuchsia-900 hover:text-white ring-gray-200 rounded-xl hover:bg-fuchsia-900 active:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-violet-300 focus:bg-fuchsia-900 focus:text-white;
+  }
+
+  .text-period {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-button-period {
+    @apply mt-10 flex gap-6;
+  } */
+
+  .text-terrapits {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-button-terrapits {
+    @apply mt-10 flex gap-6;
+  } */
+
+  .btn-select {
+    @apply p-5 text-lg ring-1 text-fuchsia-900 hover:text-white ring-gray-200 rounded-xl hover:bg-fuchsia-900 active:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-violet-300 focus:bg-fuchsia-900 focus:text-white px-10 py-3;
+  }
+
+  .text-select-terrapits-like {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-grid-terrapits-like {
+    @apply bg-white grid grid-cols-5 mt-10 gap-6;
+  } */
+
+  .card-grid-select-terrapits-like {
+    @apply shadow-md  rounded-xl hover:border-solid hover:border-2 hover:border-fuchsia-900 cursor-pointer;
+  }
+  .text-name-terrapits {
+    @apply mt-5 px-5 font-semibold text-fuchsia-900;
+  }
+
+  .icon-like {
+    @apply fill-red-300;
+  }
+
+  .text-select-terrapits-else {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-grid-select-terrapits-else {
+    @apply bg-white grid sm:grid-cols-1 mt-10 gap-6;
+  } */
+
+  /* 
+.container-grid-therapist{
+  @apply bg-white grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 mt-10 gap-6;
+} */
+
+  .card-grid-select-terrapits-else {
+    @apply shadow-md  rounded-xl hover:border-solid hover:border-2 hover:border-fuchsia-900;
+  }
+
+  .container-card-text-like-terrapist {
+    @apply flex gap-6 px-5 mt-3 pb-3 text-fuchsia-900 justify-between;
+  }
+
+  /* 
+.container-card-text-like-terrapist {
+    @apply flex gap-6 px-5 mt-3 pb-3 text-fuchsia-900;
+  }
+  .card-grid-select-terrapits-else {
+    @apply bg-white grid grid-cols-6 mt-10 gap-12;
+  } */
+
+  .container-btn-next {
+    @apply flex justify-end mt-5;
+  }
+
+  .btn-next {
+    @apply p-5  text-white md:w-full sm:w-full lg:w-64 bg-fuchsia-900 hover:bg-fuchsia-900 hover:text-white rounded-xl mt-5;
+  }
+
+  .header-service_address {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+
+  /* .container-card-address {
+    @apply grid grid-cols-2 gap-16;
+  } */
+
+  .card-address {
+    @apply rounded-xl p-10  mt-10 border-2 border-fuchsia-900  hover:border-2 cursor-pointer hover:border-fuchsia-900 hover:bg-fuchsia-100;
+  }
+
+  .text-main-address {
+    @apply text-fuchsia-900 mt-5;
+  }
+  .header-text-main-address {
+    @apply text-fuchsia-900   font-semibold;
+  }
+  .header-text-other-address {
+    @apply text-fuchsia-900  font-semibold text-center;
+  }
+
+  .container-health {
+    @apply flex;
+  }
+  .icon-edit {
+    @apply fill-fuchsia-900 mt-10;
+  }
+  .icon-home {
+    @apply fill-fuchsia-900;
+  }
+  .icon-edit-main-address {
+    @apply fill-fuchsia-900 justify-between;
+  }
+  .icon-add {
+    @apply fill-fuchsia-900 justify-between;
+  }
+  .container-add-address-other {
+    @apply flex gap-3 justify-center mt-5;
+  }
+  .header-qa-health {
+    @apply text-fuchsia-900 mt-10 text-lg font-semibold;
+  }
+  .answer-health {
+    @apply text-fuchsia-900 mt-5 text-lg;
+  }
+
+  .container-btn-confirm-reserve {
+    @apply flex justify-end mt-10;
+  }
+  .btn-confirm-reserve {
+    @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+  }
+
+  .header-text-add-address {
+    @apply text-fuchsia-900 mt-10 text-lg font-semibold;
+  }
+  /*
+  .container-input-add-address {
+    @apply bg-white  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 ;
+  }
+  */
+
+  .header-reserve-spa-company-select {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+  .text-select-date-time {
+    @apply text-lg font-semibold text-fuchsia-900 mt-10;
+  }
+  .header-contact-us {
+    @apply text-fuchsia-900 mt-10 text-lg font-semibold;
+  }
+  .container-contact-us {
+    @apply px-10 py-10;
+  }
+  .card-contact-us {
+    @apply p-10 border-2 shadow-md rounded-xl mt-10;
+  }
+  .container-input-contact {
+    @apply bg-white  mt-5 gap-6;
+  }
+  .container-summarize-reserve {
+    @apply px-10 mt-10;
+  }
+  /*
+  .container-grid-summarize-reserve {
+    @apply grid grid-cols-2 text-center mt-10 gap-10;
+  }
+  */
+  .card-user-information {
+    @apply mt-10 border-2 border-fuchsia-900 p-10 rounded-2xl;
+  }
+  .header-summarize {
+    @apply text-xl font-semibold text-fuchsia-900 text-left;
+  }
+  .label-summarize {
+    @apply text-lg font-semibold text-fuchsia-900 flex justify-start;
+  }
+  .text-summarize {
+    @apply text-fuchsia-900 flex justify-start lg:text-lg md:text-base sm:text-base;
+  }
+  .summarize-pay {
+    @apply text-xl font-semibold text-fuchsia-900 mt-5 flex justify-start;
+  }
+  .label-summarize-price {
+    @apply text-lg font-semibold text-fuchsia-900 flex justify-end;
+  }
+}
+.button-pay {
+  @apply text-white bg-pink-400 w-full py-3 mt-5 rounded-lg;
+}
+.button-code {
+  @apply text-white bg-fuchsia-900 w-full py-3 mt-5 rounded-lg;
+}
+
+#aaa:checked ~ .tab-aaa {
+  @apply flex;
+}
+
+#aaa:checked ~ .nav label[for="aaa"] span {
+  @apply bg-fuchsia-900 text-white;
+}
+
+#bbb:checked ~ .tab-bbb {
+  @apply flex;
+}
+
+#bbb:checked ~ .nav label[for="bbb"] span {
+  @apply bg-fuchsia-900 text-white;
+}
+
+.container-tab-setting-profile {
+  @apply mt-10;
+}
+
+.icon-setting-profile {
+  @apply fill-fuchsia-900;
+}
+
+#aaa:checked ~ .nav label[for="aaa"] span .icon-setting-profile {
+  @apply fill-white;
+}
+
+#bbb:checked ~ .nav label[for="bbb"] span .icon-setting-profile {
+  @apply fill-white;
+}
+
+.button-save {
+  @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+}
+
+.container-all-my-reserve {
+  @apply px-10 py-10;
+}
+
+.header-all-my-reserve {
+  @apply text-lg font-semibold text-fuchsia-900;
+}
+
+.container-therapist {
+  @apply px-10 mt-10  text-fuchsia-900;
+}
+.header-therapist {
+  @apply text-lg font-semibold text-fuchsia-900;
+}
+.container-details-therapist {
+  @apply px-10 mt-10  text-fuchsia-900;
+}
+.header-detail-therapist {
+  @apply text-lg font-semibold text-fuchsia-900;
+}
+
+.header-detail-certificate {
+  @apply text-lg font-semibold text-fuchsia-900 mt-10 p-10;
+}
+
+.card-list-details-user {
+  @apply border-2 border-fuchsia-900 p-5 rounded-2xl;
+}
+
+.grad-list-details-user {
+  @apply grid grid-cols-2 text-center mt-10;
+}
+.list-icon-header-details-user {
+  @apply flex gap-5 justify-end;
+}
+.container-tab-all_my_reserve {
+  @apply mt-10;
+}
+
+.icon-all_my-reserve {
+  @apply fill-fuchsia-900;
+}
+
+#reserve-all:checked ~ .tab-reserve_sucess {
+  @apply flex;
+}
+
+#reserve-all:checked ~ .nav label[for="reserve-all"] span {
+  @apply lg:border-b-8 lg:border-fuchsia-900  sm:bg-fuchsia-200  md:bg-fuchsia-100 lg:bg-fuchsia-100;
+}
+
+#reserve-all:checked ~ .nav label[for="reserve-all"] span .icon-all_my-reserve {
+  @apply fill-white;
+}
+
+#outstanding:checked ~ .tab-outstanding {
+  @apply flex;
+}
+
+#reserve-all:checked ~ .tab-reserve-all {
+  @apply flex;
+}
+
+#success-payment:checked ~ .tab-success-payment {
+  @apply flex;
+}
+
+#service-success:checked ~ .tab-service-success {
+  @apply flex;
+}
+
+#outstanding:checked ~ .nav label[for="outstanding"] span {
+  @apply lg:border-b-8 lg:border-fuchsia-900  sm:bg-fuchsia-200  md:bg-fuchsia-100 lg:bg-fuchsia-100;
+}
+
+#success-payment:checked ~ .tab-success-payment {
+  @apply flex;
+}
+
+#success-payment:checked ~ .nav label[for="success-payment"] span {
+  @apply lg:border-b-8 lg:border-fuchsia-900  sm:bg-fuchsia-200  md:bg-fuchsia-100 lg:bg-fuchsia-100;
+}
+
+#service-success:checked ~ .tab-success-service-success {
+  @apply flex;
+}
+
+#service-success:checked ~ .nav label[for="service-success"] span {
+  @apply lg:border-b-8 lg:border-fuchsia-900  sm:bg-fuchsia-200  md:bg-fuchsia-100 lg:bg-fuchsia-100;
+}
+
+.label-all-my-service {
+  @apply text-lg font-semibold text-fuchsia-900;
+}
+.text-all-my-service {
+  @apply text-fuchsia-900;
+}
+.list-icon-header-all-my-reserve {
+  @apply flex gap-5 justify-end;
+}
+
+.container-pay-outstanding {
+  @apply flex justify-end mt-10;
+}
+
+.button-pay-outstanding {
+  @apply bg-fuchsia-900 sm:w-full  mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+}
+
+.text-header-tab-all_my_reserve {
+  @apply lg:text-fuchsia-800  sm:text-fuchsia-800 font-semibold;
+}
+
+.container-aroma-oil {
+  @apply px-10 m-10;
+}
+
+.header-aroma-oil {
+  @apply text-lg font-semibold text-fuchsia-900 mt-20;
+}
+
+/* .grid-aroma-oil-receive {
+  @apply grid grid-cols-3  gap-20;
+} */
+
+.card-aroma-oil-receive {
+  @apply text-fuchsia-900 text-center  lg:mt-10 md:mt-10 sm:mt-5 p-5;
+}
+
+.grid-aroma-oil-contant {
+  @apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 mt-10 gap-20 text-fuchsia-900;
+}
+
+.container-button-booking-aroma-contant {
+  @apply mt-10 flex justify-end;
+}
+
+.button-booking-aroma-contant {
+  @apply bg-fuchsia-900 mt-20 py-3  rounded-lg text-white  text-lg font-semibold w-full md:w-60 lg:w-60;
+}
+
+.grid-aroma-oil-benefit {
+  @apply grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 mt-10 gap-5 text-fuchsia-900 font-semibold text-center;
+}
+
+.button-booking-aroma-contant-pink {
+  @apply bg-pink-400  py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+}
+
+.container-join-up {
+  @apply px-10 m-10;
+}
+
+.header-join-up {
+  @apply text-lg font-semibold text-fuchsia-900 mt-10;
+}
+
+.text-join-up {
+  @apply text-lg font-semibold text-fuchsia-900 mt-10 text-center;
+}
+
+.grid-join_up {
+  @apply grid grid-cols-3 mt-10 gap-5 text-fuchsia-900 font-semibold text-center;
+}
+
+.button-submit-code {
+  @apply bg-fuchsia-900 w-full mt-10 py-2 px-12 rounded-lg text-white  text-lg font-semibold hover:bg-fuchsia-800;
+}
+
+.text-header-time-therapist {
+  @apply text-fuchsia-900 text-2xl font-semibold mt-10;
+}
+.text-time-therapist {
+  @apply text-fuchsia-900 text-xl font-semibold mt-10;
+}
+.container-send-contact-us {
+  @apply flex justify-end mt-10;
+}
+
+.button-send-contact-us {
+  @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+}
+
+.container-reserve_time_therapist {
+  @apply px-10 py-10;
+}
+
+/* .container-grid-select-reserve_time_therapist {
+  @apply grid grid-cols-5 text-center mt-10 gap-10;
+} */
+
+.button-time_therapist {
+  @apply text-lg ring text-fuchsia-900 hover:text-white ring-fuchsia-800 hover:bg-fuchsia-900 active:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-violet-300 focus:bg-fuchsia-900 focus:text-white px-10 py-3 rounded-xl;
+}
+
+.button-send-contact-us {
+  @apply bg-fuchsia-900 mt-12 py-3 px-12 rounded-lg text-white  text-lg font-semibold;
+}
+
+.container-submit-reserve-time-therapist {
+  @apply flex justify-end mt-10;
+}
+
+.button-submit-reserve-time-therapist {
+  @apply bg-fuchsia-900 py-4 px-24 rounded-lg  text-white font-semibold border-2 border-fuchsia-900;
+}
+
+/* .card-information-price {
+    @apply mt-10 border-2 border-fuchsia-900 px-10 pt-10 rounded-2xl;
+  } */
+
+/* .container-button-package-own {
+  @apply mt-20 flex gap-6;
+} */
+
+.btn-select-kind-package-own {
+  @apply p-5 text-lg ring-1 text-fuchsia-900 hover:text-white ring-gray-200 rounded-xl hover:bg-fuchsia-900 active:bg-fuchsia-900 focus:outline-none focus:ring focus:ring-violet-300 focus:bg-fuchsia-900 focus:text-white;
+}
+
+.grid-package-reserve_group {
+  @apply grid grid-cols-4 mt-20 gap-10;
+}
+
+.container-grid-select-reserve_time_service {
+  @apply grid grid-cols-5 text-center mt-10 gap-10;
+}
+
+.button-time_service {
+  @apply hover:bg-fuchsia-900 py-4 px-5 rounded-lg hover:text-white  text-fuchsia-900 font-semibold border-2 border-fuchsia-900;
+}
+
+.container_scan_qr_code_line {
+  @apply px-10 py-10;
+}
+
+.header-all-my-reserve {
+  @apply text-lg font-semibold text-fuchsia-900 mt-10;
+}
+
+.padding-image-qr-code {
+  @apply flex justify-center p-10 mx-96 mt-20 border-4 border-fuchsia-100;
+}
+
+.container-our-portfolio {
+  @apply lg:px-10 md:px-10 sm:px-5 m-10;
+}
+
+.card-our-portforio {
+  @apply border-2 border-fuchsia-100  rounded-lg p-5;
+}
+
+.header-our-portfolio {
+  @apply text-lg font-semibold text-fuchsia-900 mt-10 text-center;
+}
+.text-header-card {
+  @apply text-fuchsia-900 font-semibold text-center;
+}
+.text-card {
+  @apply text-fuchsia-900 lg:mx-20 md:mx-10 sm:mx-2 text-center mt-5;
+}
+
+.button-booking-our-portforio {
+  @apply bg-fuchsia-900 mt-20 py-3 px-12 lg:w-60 md:w-60  sm:w-full rounded-lg  text-white  text-lg font-semibold;
+}
+
+.payment-content {
+  @apply flex items-center sm:justify-center p-5 pr-16 sm:p-8 gap-5 h-24 sm:h-40 w-full
+  bg-white border-2 border-gray-200 rounded-lg transition peer-checked:border-fuchsia-900  peer-checked:shadow-lg peer-checked:-translate-y-1;
+}
+
+.payment-text {
+  @apply static sm:absolute top-full sm:mt-1 text-center text-lg sm:text-xl w-auto sm:w-full opacity-70 font-medium;
+}
+
+.payment-checked {
+  @apply absolute top-1/2 sm:-top-4 right-6 sm:-right-3 -translate-y-1/2 sm:translate-y-0 mt-1 bg-fuchsia-900 text-white h-8 w-8 p-0.5 rounded-full transition peer-checked:scale-100 scale-0;
+}
+
+.text-menu-navbar-top {
+  @apply text-fuchsia-900;
+}
+.icon-spa-join-up {
+  @apply bg-white fill-fuchsia-900  p-2  rounded-full inline;
+}
+
+.button-join-up {
+  @apply bg-pink-400 mt-20 px-5 py-3 lg:w-60 md:w-60 sm:w-full rounded-lg text-white  text-lg font-semibold;
+}
+.card-join-up {
+  @apply p-10 rounded-xl text-center shadow-lg bg-pink-100  hover:bg-pink-200;
+}
+
+.card-join-up-add-line {
+  @apply bg-fuchsia-900 px-10 py-20 rounded-2xl mt-10;
+}
+
+.text-join-up-add-line {
+  @apply text-white;
+}
+
+.button-join-up-bottom {
+  @apply bg-fuchsia-900 mt-20 px-5 py-3 lg:w-60 md:w-60 sm:w-full rounded-lg text-white  text-lg font-semibold;
+}
+.text-code {
+  @apply text-white leading-8 font-bold text-xl;
+}
+.payment-image {
+  @apply w-10 h-10;
+}
+
+.card-select-pay {
+  @apply mt-5 rounded-lg py-5 px-5 w-full bg-purple-50 focus:from-amber-500;
+}
+
+.card-visa {
+  @apply bg-gray-50 p-10 rounded-lg;
+}
+.grid-aroma-oil-contant {
+  @apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1;
+}
+
+.radio-group .radio {
+  @apply text-fuchsia-900 fill-fuchsia-900;
+  position: relative;
+}
+
+.radio input {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* .radio icon-address {
+  @apply fill-fuchsia-900 ;
+} */
+
+.radio label:hover {
+  cursor: pointer;
+}
+
+.radio input:checked + label {
+  @apply bg-fuchsia-900 border-fuchsia-300 text-white fill-white;
+  /* border-color: #AA336A	; 
+  background-color:#702963;  */
+}
+
+.mobile-menu {
+  left: -200%;
+  transition: 0.5s;
+}
+
+.mobile-menu.active {
+  left: 0;
+}
+
+.mobile-menu ul li ul {
+  display: none;
+}
+
+.mobile-menu ul li:hover ul {
+  display: block;
+}
+
+.footer-image {
+  background-image: url("../../public/images/footer.png");
+  background-size: cover;
+}
+
+.swal-button--confirm {
+  @apply bg-red-900;
+}
+
+.swal-title {
+  font-size: 1.5rem !important;
+}

@@ -36,7 +36,6 @@
                     <span class="text-red-600 ">{{$message}}</span>
                 </div>
                 @enderror
-
             </div>
 
             <div class="mb-6">
@@ -46,8 +45,7 @@
 
                 <textarea type="text"
                     class="shadow appearance-none  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline @if($errors->has('product_details')) border border-red-600 @else border-none  @endif"
-                    id="product_details" type="text" name="product_details"
-                    value="{{$product->product_details}}"></textarea>
+                    id="product_details" type="text" name="product_details">{{$product->product_details}}</textarea>
 
                 @error('product_details')
                 <div class="mt-2">
